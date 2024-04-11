@@ -1,0 +1,76 @@
+# Nom del lloc
+site_name: Curs 23/24
+
+# Carpeta amb el documents fot
+docs_dir: 'md'
+
+# Carpeta on es generarà el lloc web (mkdocs build)
+site_dir: 'docs'
+
+# Adreça on s'executa el server local (mkdocs serve)
+dev_addr: localhost:8000
+
+# Navegació dels documents
+# nav
+#   - Títol: Document.md
+nav:
+  - Benvingut: index.md
+  - 1 CFGM SMX:
+    - Unitat 1: contingut.md
+    - Unitat 2: contingut.md
+    - Unitat 3: contingut.md
+    - Unitat 4: contingut.md
+    - Unitat 5: SMX_UD5.md
+    - Unitat 6: contingut.md
+    - Unitat 7: contingut.md
+    - Unitat 8: contingut.md
+  - 1 CFGB Info:
+    - Unitat 1: contingut.md
+    - Unitat 2: contingut.md
+    - Unitat 3: contingut.md
+    - Unitat 4: contingut.md
+    - Unitat 5: contingut.md
+    - Unitat 6: contingut.md
+    - Unitat 7: contingut.md
+    - Unitat 8: contingut.md
+  - Tutoría: contingut.md
+
+# Extenions
+markdown_extensions:
+  - admonition
+  - attr_list         # permet afegir atributs a les etiquetes html 
+  # pymdownx és una col·leccio per escritura tècnica. S'instal·la per defecte
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      linenums: true
+      anchor_linenums: true
+      auto_title: true
+
+# Tema a triar
+theme: 
+  name: material  # selecció del tema
+  logo: img/favicon.ico
+  palette:
+   # Boto que canvia a mode oscur
+    - scheme: default
+      toggle:
+        icon: material/brightness-7 
+        name: Switch to dark mode
+    # Botó que canvia a mode clar
+    - scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    # utilitats de copia de codi
+    - content.code.copy 
+    - content.code.select
+    - content.code.annotate
+    - navigation.footer       # footer de la pagina, amb navegació
+    - navigation.top    # boto flotant de tornar a dalt 
+
+# Altres afegits
+plugins:
+  - search      # plugin del quadre cerca
+ # - pdf-export  # plugin per exportar a pdf
